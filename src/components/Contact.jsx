@@ -46,14 +46,14 @@ export default function Project() {
       <div className="max-w-[600px] mx-auto py-10 sm:py-20 px-4">
         <form
           onSubmit={handleSubmit}
-          className="w-full h-auto p-6 sm:p-10 border-4 border-gray-500 rounded-lg shadow-lg shadow-gray-500/50 flex flex-col gap-4 sm:gap-5"
+          className="w-full h-auto p-4 sm:p-6 border-4 border-gray-500 rounded-lg shadow-lg shadow-gray-500/50 flex flex-col gap-4 sm:gap-5"
         >
-          <h1 className="text-xl md:text-4xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500 text-center">
+          <h1 className="text-lg md:text-2xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500 text-center">
             Contact
           </h1>
 
           <input
-            className={`w-full border-2 border-gray-500 rounded-md p-3 sm:p-4 text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-teal-400 ${
+            className={`w-full border-2 border-gray-500 rounded-md p-2 sm:p-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-teal-400 ${
               name ? "bg-white text-black" : "bg-gray-200 text-black"
             }`}
             type="text"
@@ -63,7 +63,7 @@ export default function Project() {
           />
 
           <input
-            className={`w-full border-2 border-gray-500 rounded-md p-3 sm:p-4 text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-teal-400 ${
+            className={`w-full border-2 border-gray-500 rounded-md p-2 sm:p-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-teal-400 ${
               email ? "bg-white text-black" : "bg-gray-200 text-black"
             }`}
             type="email"
@@ -73,7 +73,7 @@ export default function Project() {
           />
 
           <textarea
-            className={`w-full border-2 border-gray-500 rounded-md p-3 sm:p-4 text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-teal-400 ${
+            className={`w-full border-2 border-gray-500 rounded-md p-2 sm:p-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-teal-400 ${
               message ? "bg-white text-black" : "bg-gray-200 text-black"
             }`}
             rows="4"
