@@ -34,7 +34,7 @@ export default function Projects() {
           </p>
           <div className="flex justify-between mt-4 space-x-4 text-lg md:text-xl font-medium">
             <a href="https://github.com/nisharj/Personal-Portfolio" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">🔗 View Code</a>
-            <a href="https://nisharj.github.io/" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:underline">🌐 Live Preview</a>
+            <a href="https://nisharj.github.io/Personal-Portfolio/" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:underline">🌐 Live Preview</a>
           </div>
         </div>
 
