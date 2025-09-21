@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { SiLeetcode, SiGeeksforgeeks } from "react-icons/si";
+import { profileImg } from "../assets/ImageDatas";
 
 export default function Home() {
   return (
@@ -57,7 +58,7 @@ export default function Home() {
         <div className="flex justify-center -mt-15">
           <div className="relative w-40 h-40 sm:w-56 sm:h-56 md:w-80 md:h-80 border-4 border-gray-700 rounded-full overflow-hidden shadow-lg shadow-teal-500/30 hover:scale-105 hover:shadow-teal-400/40 transition duration-300">
             <img 
-              src="src/assets/photo.jpg" 
+              src={profileImg} 
               alt="Profile" 
               className="w-full h-full object-cover"
             />
