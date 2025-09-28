@@ -47,7 +47,7 @@ export default function Home() {
 
           <div className="flex justify-center md:justify-start">
             <a 
-              href="/contact" 
+              href="/Personal-Portfolio/contact" 
               className="mt-6 inline-block bg-gradient-to-r from-teal-400 to-blue-500 text-white px-5 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold shadow-lg hover:opacity-90 transition"
             >
               Contact Me
