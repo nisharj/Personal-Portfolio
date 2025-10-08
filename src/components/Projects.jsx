@@ -39,7 +39,7 @@ export default function Projects() {
         </div>
 
 
-        <div className="w-full p-6 sm:p-10 border-4 border-gray-500 rounded-lg shadow-lg shadow-gray-500/50">
+        {/* <div className="w-full p-6 sm:p-10 border-4 border-gray-500 rounded-lg shadow-lg shadow-gray-500/50">
           <h1 className="text-xl md:text-3xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500">
             Speech-to-Text Web App
           </h1>
@@ -55,7 +55,7 @@ export default function Projects() {
             <a href="https://github.com/nisharj/Speech-to-Text-Web-App" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">🔗 View Code</a>
             <a href="https://nisharj.github.io/Speech-to-Text-Web-App/" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:underline">🌐 Live Preview</a>
           </div>
-        </div>
+        </div> */}
 
       </div>
     </div>

@@ -9,11 +9,11 @@ export default function Project() {
           <ul className="space-y-2 sm:space-y-4 text-base sm:text-lg md:text-xl font-medium text-gray-300 tracking-wide">
             <li className="py-2">Java (Data Structures & Algorithms)</li>
             <li className="py-2">C programming</li>
+            <li className="py-2">Git & GitHub</li>
             <li className="py-2">Reactjs</li>
             <li className="py-2">HTML & CSS</li>
             <li className="py-2">SpringBoot</li>
             <li className="py-2">MYSQL & MongoDB</li>
-            <li className="py-2">Git & GitHub</li>
           </ul>
         </div>
         
