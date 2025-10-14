@@ -1,6 +1,8 @@
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { SiLeetcode, SiGeeksforgeeks } from "react-icons/si";
 import { profileImg } from "../assets/ImageDatas";
+import CV from '../assets/Mohamednishar_J.pdf';
+
 
 export default function Home() {
   return (
@@ -12,7 +14,7 @@ export default function Home() {
             MOHAMEDNISHAR J
           </h1>
 
-          <p className="text-xm sm:text-sm md:text-base text-gray-300 leading-relaxed">
+          <p className="text-xm sm:text-base md:text-xl text-gray-300 leading-relaxed">
             I’m <span className="font-semibold text-white">Mohamednishar J</span>, 
             an M.Tech Computer Science and Engineering student at 
             <span className="text-teal-400"> Sri Krishna College of Engineering and Technology</span> (2028 batch). 
@@ -45,15 +47,30 @@ export default function Home() {
         </a>
         </div>
 
-          <div className="flex justify-center md:justify-start">
-            <a 
-              href="/contact" 
-              className="mt-6 inline-block bg-gradient-to-r from-teal-400 to-blue-500 text-white px-5 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold shadow-lg hover:opacity-90 transition"
-            >
-              Contact Me
-            </a>
-          </div>
+         <div className="flex justify-center md:justify-start">
+
+          {/* Opens in a new tab */}
+          <a
+            href={CV}
+            target="_blank"            
+            rel="noopener noreferrer"
+            className="mt-6 inline-block bg-gradient-to-r from-teal-400 to-blue-500 text-white px-5 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold shadow-lg hover:opacity-90 transition"
+          >
+            View CV
+          </a>
+
+          {/* Direct download */}
+          <a
+            href={CV}
+            download                    
+            className="mt-6 ml-4 inline-block bg-gradient-to-r from-teal-400 to-blue-500 text-white px-5 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold shadow-lg hover:opacity-90 transition"
+          >
+            Download CV
+          </a>
         </div>
+        
+        </div>
+
 
         <div className="flex justify-center -mt-15">
           <div className="relative w-40 h-40 sm:w-56 sm:h-56 md:w-80 md:h-80 border-4 border-gray-700 rounded-full overflow-hidden shadow-lg shadow-teal-500/30 hover:scale-105 hover:shadow-teal-400/40 transition duration-300">
