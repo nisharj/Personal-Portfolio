@@ -41,7 +41,7 @@ export default function Project() {
   };
 
   return (
-    <div className="bg-gray-900 text-white w-full min-h-screen">
+    <div className="bg-gray-900 text-white w-full min-h-screen pt-10">
 
       <div className="max-w-[600px] mx-auto py-10 sm:py-20 px-4">
         <form

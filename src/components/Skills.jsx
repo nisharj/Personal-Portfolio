@@ -1,6 +1,6 @@
 export default function Project() {
   return (
-    <div className="bg-gray-900 text-white min-h-screen py-10 px-4 sm:px-6">
+    <div className="bg-gray-900 text-white min-h-screen py-10 px-4 sm:px-6 pt-24">
       <div className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-10">
         <div className="w-full h-auto p-6 sm:p-10 border-4 border-gray-500 rounded-lg shadow-lg shadow-gray-500/50">
           <h1 className="text-center text-xl md:text-4xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500">
