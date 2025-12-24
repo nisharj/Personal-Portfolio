@@ -1,7 +1,7 @@
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { SiLeetcode, SiGeeksforgeeks } from "react-icons/si";
 import { profileImg } from "../assets/ImageDatas";
-import CV from '../assets/Mohamednishar_J.pdf';
+import CV from '../assets/Mohamednishar J.pdf';
 
 export default function Home() {
   return (

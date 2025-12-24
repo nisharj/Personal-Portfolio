@@ -54,6 +54,30 @@ export default function Projects() {
           </div>
         </div>
 
+        {/* === Card 3 === */}
+        <div className="w-full p-6 sm:p-10 border-4 border-gray-500 rounded-xl shadow-lg shadow-gray-500/30 hover:shadow-teal-400/40 transition duration-300">
+          <h1 className="text-xl md:text-3xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500">
+            AI Powered Notes
+          </h1>
+
+          <p className="text-gray-300 mb-4 text-lg md:text-xl tracking-wide">
+            This AI-Powered Notes Application is a smart productivity tool designed to help users create, organize, and manage notes efficiently with built-in artificial intelligence
+          </p>
+
+          <p className="text-gray-400 mb-4 text-lg md:text-xl">
+            <span className="font-semibold text-white">Technologies Used:</span> React.js, Tailwind CSS, MongoDB, Python
+          </p>
+
+          <div className="flex justify-between mt-4 text-lg md:text-xl font-medium">
+            <a href="https://github.com/nisharj/AI-Project" target="_blank" className="text-blue-400 hover:underline">
+              🔗 View Code
+            </a>
+            <a href="https://nisharj.github.io/" target="_blank" className="text-green-400 hover:underline">
+              🌐 Live Preview
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
   );
