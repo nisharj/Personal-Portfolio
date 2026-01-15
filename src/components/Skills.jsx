@@ -1,35 +1,57 @@
 export default function Project() {
   return (
-    <div className="bg-gray-900 text-white min-h-screen py-10 px-4 sm:px-6 pt-24">
-      <div className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-10">
-        <div className="w-full h-auto p-6 sm:p-10 border-4 border-gray-500 rounded-lg shadow-lg shadow-gray-500/50">
-          <h1 className="text-center text-xl md:text-4xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500">
+    <section className="min-h-screen bg-gray-950 text-white pt-28 px-6">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
+
+        {/* ================= TECHNICAL SKILLS ================= */}
+        <div className="rounded-xl border border-gray-800 bg-gray-900/60 backdrop-blur p-8 
+                        hover:border-teal-400/40 transition">
+
+          <h2 className="text-3xl font-semibold mb-6 text-center">
             Technical Skills
-          </h1>
-          <ul className="space-y-2 sm:space-y-4 text-base sm:text-lg md:text-xl font-medium text-gray-300 tracking-wide">
-            <li className="py-2">Java (Data Structures & Algorithms)</li>
-            <li className="py-2">C programming</li>
-            <li className="py-2">Git & GitHub</li>
-            <li className="py-2">Reactjs</li>
-            <li className="py-2">HTML & CSS</li>
-            <li className="py-2">SpringBoot</li>
-            <li className="py-2">MYSQL & MongoDB</li>
-          </ul>
+          </h2>
+
+          <div className="flex flex-wrap gap-3 justify-center">
+            {[
+              "Java (DSA)",
+              "C Programming",
+              "React.js",
+              "Spring Boot",
+              "HTML & CSS",
+              "MySQL",
+              "MongoDB",
+              "Git & GitHub",
+            ].map((skill, index) => (
+              <span
+                key={index}
+                className="px-4 py-2 rounded-full text-sm font-medium 
+                           bg-gray-800 text-gray-300 
+                           hover:bg-teal-500/10 hover:text-teal-400 transition"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
         </div>
-        
-        <div className="w-full h-auto p-6 sm:p-10 border-4 border-gray-500 rounded-lg shadow-lg shadow-gray-500/50">
-          <h1 className="text-center text-xl md:text-4xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500">
+
+        {/* ================= SOFT SKILLS ================= */}
+        <div className="rounded-xl border border-gray-800 bg-gray-900/60 backdrop-blur p-8 
+                        hover:border-teal-400/40 transition">
+
+          <h2 className="text-3xl font-semibold mb-6 text-center">
             Soft Skills
-          </h1>
-          <ul className="space-y-3 sm:space-y-4 text-base sm:text-lg md:text-xl font-medium text-gray-300 tracking-wide">
-            <li className="py-2">Problem-Solving & Logical Thinking</li>
-            <li className="py-2">Continuous Learning & Curiosity</li>
-            <li className="py-2">Team Collaboration</li>
-            <li className="py-2">Time Management</li>
-            <li className="py-2">Communication</li>
+          </h2>
+
+          <ul className="space-y-4 text-gray-300 text-lg">
+            <li>• Strong problem-solving & logical thinking</li>
+            <li>• Continuous learning mindset</li>
+            <li>• Effective team collaboration</li>
+            <li>• Time management & task prioritization</li>
+            <li>• Clear and structured communication</li>
           </ul>
         </div>
+
       </div>
-    </div>
+    </section>
   );
 }
