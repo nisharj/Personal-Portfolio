@@ -20,7 +20,7 @@ export default function Projects() {
               description="Developed a productivity-focused notes application with AI-assisted organization. Built a responsive frontend using React and Tailwind CSS, with backend integration using MongoDB and Python. Focused on clean UI, structured data handling, and scalable design."
               tech="React, Tailwind CSS, MongoDB, Python"
               code="https://github.com/nisharj/AI-Project"
-              live="https://nisharj.github.io/"
+              live="https://ai-notes-phi-three.vercel.app/"
             />
           </div>
         </div>
