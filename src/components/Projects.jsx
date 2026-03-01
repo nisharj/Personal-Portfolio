@@ -3,9 +3,7 @@ import ProjectCard from "./ProjectCard";
 export default function Projects() {
   return (
     <section className="min-h-screen bg-gray-950 text-white pt-28 px-6">
-
       <div className="max-w-7xl mx-auto space-y-20">
-
         {/* ================= MAIN PROJECTS ================= */}
         <div>
           <h2 className="text-3xl font-bold mb-2">Projects</h2>
@@ -50,10 +48,15 @@ export default function Projects() {
               live="https://nisharj.github.io/Weather-and-Air-Pollution-Report/"
             />
 
-
+            <ProjectCard
+              title="Community Event Management System"
+              description="Built a full event management platform where admins can create and manage community events and users can register online. Implemented authentication, database integration, and automated confirmation emails using no-code tools. Focused on system design, workflow automation, and real-world usability."
+              tech="Bubble, Airtable, Jotform, Make (Automation)"
+              code="https://github.com/nisharj/community-event-management-system"
+              live="https://mrmohamed9345-39966.bubbleapps.io/version-test/?debug_mode=true"
+            />
           </div>
         </div>
-
       </div>
     </section>
   );
