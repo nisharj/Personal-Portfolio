@@ -1,64 +1,77 @@
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 export default function ProjectCard({
+  image,
   title,
   description,
   tech,
   code,
   live,
 }) {
+  const techItems = tech.split(",").map((item) => item.trim());
+
   return (
-    <div className="group relative rounded-2xl border border-gray-800 bg-gray-900/40 backdrop-blur 
-                    p-6 sm:p-8 transition-all duration-300 
-                    hover:border-teal-400/40 hover:shadow-xl hover:shadow-teal-400/10
-                    hover:-translate-y-2">
+    <article className="group relative rounded-2xl border border-blue-900/50 bg-slate-950/45 p-5 backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-sky-400/50 hover:shadow-[0_0_30px_rgba(56,189,248,0.18)]">
+      <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-sky-400/10 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
-      
-      <div className="absolute inset-0 bg-gradient-to-br from-teal-400/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      <div className="relative z-10 space-y-4">
+        <div className="rounded-xl border border-blue-900/50 bg-gradient-to-br from-slate-950/80 to-black/40 p-3">
+          <div className="mb-3 flex gap-1.5">
+            <span className="h-2.5 w-2.5 rounded-full bg-sky-400/80" />
+            <span className="h-2.5 w-2.5 rounded-full bg-cyan-300/70" />
+            <span className="h-2.5 w-2.5 rounded-full bg-blue-700/80" />
+          </div>
+          <div className="h-32 overflow-hidden rounded-lg border border-blue-900/60 bg-gradient-to-br from-blue-900/25 to-slate-950/60">
+            <img
+              src={image}
+              alt={title}
+              className="h-full w-full object-cover object-top"
+              loading="lazy"
+            />
+          </div>
+        </div>
 
-      <div className="relative z-10">
-        <h3 className="text-xl md:text-2xl font-semibold mb-3 text-white group-hover:text-teal-400 transition-colors duration-300">
+        <h3 className="text-xl font-semibold text-slate-50 transition-colors duration-300 group-hover:text-sky-200">
           {title}
         </h3>
 
-        <p className="text-gray-400 leading-relaxed mb-4 min-h-[60px]">
+        <p className="min-h-[72px] text-sm leading-relaxed text-slate-100/75">
           {description}
         </p>
 
-        <div className="flex items-center gap-2 mb-6">
-          <span className="text-xs text-gray-500 font-medium">TECH STACK:</span>
-          <p className="text-sm text-gray-400">
-            {tech}
-          </p>
+        <div className="flex flex-wrap gap-2">
+          {techItems.map((item) => (
+            <span
+              key={item}
+              className="rounded-full border border-sky-500/25 bg-blue-950/35 px-3 py-1 text-xs font-medium text-slate-100/85"
+            >
+              {item}
+            </span>
+          ))}
         </div>
 
-        <div className="flex gap-4 text-sm font-medium">
+        <div className="flex gap-3 pt-1 text-sm font-medium">
           <a
             href={code}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-5 py-2.5 rounded-lg border-2 border-gray-700 text-gray-300
-                       hover:border-teal-400 hover:text-teal-400 hover:shadow-md hover:shadow-teal-400/20
-                       transition-all duration-300"
+            className="inline-flex items-center gap-2 rounded-full border border-sky-500/35 bg-slate-950/60 px-4 py-2 text-slate-100/90 transition-all duration-300 hover:border-sky-300 hover:text-white hover:shadow-[0_0_18px_rgba(56,189,248,0.3)]"
           >
-            <FaGithub size={18} />
-            <span>Code</span>
+            <FaGithub size={14} />
+            <span>GitHub</span>
           </a>
 
           <a
             href={live}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-teal-500/20 to-blue-500/20
-                       text-teal-400 border-2 border-teal-500/30
-                       hover:from-teal-500/30 hover:to-blue-500/30 hover:border-teal-400/50 hover:shadow-md hover:shadow-teal-400/20
-                       transition-all duration-300"
+            className="inline-flex items-center gap-2 rounded-full border border-sky-400/50 bg-gradient-to-r from-sky-600/80 to-blue-700/80 px-4 py-2 text-white transition-all duration-300 hover:from-sky-500 hover:to-blue-600 hover:shadow-[0_0_20px_rgba(56,189,248,0.35)]"
           >
-            <FaExternalLinkAlt size={16} />
+            <FaExternalLinkAlt size={12} />
             <span>Live Demo</span>
           </a>
         </div>
       </div>
-    </div>
+    </article>
   );
 }
