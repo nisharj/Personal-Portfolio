@@ -2,7 +2,6 @@ import ProjectCard from "./ProjectCard";
 import aiNotesImage from "../assets/ai-notes.png";
 import portfolioImage from "../assets/portfolio.png";
 import weatherAppImage from "../assets/weather-app.png";
-import eventManagementImage from "../assets/event-management.png";
 
 export default function Projects() {
   const projects = [
@@ -33,15 +32,6 @@ export default function Projects() {
       code: "https://github.com/nisharj/Weather-and-Air-Pollution-Report",
       live: "https://nisharj.github.io/Weather-and-Air-Pollution-Report/",
     },
-    // {
-    //   image: eventManagementImage,
-    //   title: "Community Event Management",
-    //   description:
-    //     "End-to-end event workflow with admin controls, registrations, and automated emails.",
-    //   tech: "Bubble, Airtable, Jotform, Make",
-    //   code: "https://github.com/nisharj/community-event-management-system",
-    //   live: "https://mrmohamed9345-39966.bubbleapps.io/version-test/?debug_mode=true",
-    // },
   ];
 
   return (
