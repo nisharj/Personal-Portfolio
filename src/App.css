@@ -1,40 +1,27 @@
 @import "tailwindcss";
 
-:root {
-  --theme-blue-1: #020617;
-  --theme-blue-2: #0f172a;
-  --theme-blue-3: #172554;
-  --theme-glow: rgba(56, 189, 248, 0.38);
-}
-
-body {
-  background: radial-gradient(1200px 640px at 20% 8%, rgba(14, 165, 233, 0.16), transparent 68%),
-    radial-gradient(1000px 620px at 92% 82%, rgba(30, 64, 175, 0.2), transparent 72%),
-    linear-gradient(135deg, var(--theme-blue-1), var(--theme-blue-2) 50%, var(--theme-blue-3));
-  color: #dbeafe;
-}
-
-.theme-dark-blue {
-  min-height: 100vh;
-  background: radial-gradient(760px 420px at 12% 22%, rgba(14, 165, 233, 0.12), transparent 72%),
-    radial-gradient(760px 500px at 82% 72%, rgba(37, 99, 235, 0.16), transparent 74%);
-}
-
-.nav-glow {
-  box-shadow: 0 8px 32px rgba(15, 23, 42, 0.45), 0 0 22px var(--theme-glow);
-}
-
-.btn-blue-glow {
-  box-shadow: 0 0 18px rgba(56, 189, 248, 0.3);
-}
-
 /* Hide scrollbar for Chrome, Safari, Edge */
 ::-webkit-scrollbar {
   display: none;
 }
 
-/* Hide scrollbar for Firefox */
-html {
-  scrollbar-width: none;
-  scroll-behavior: smooth;
+@keyframes float{
+  0%, 100%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(-20px);
+  }
+}
+
+.float{
+  animation: float 6s ease-in-out infinite;
+}
+
+.float-slow{
+  animation: float 8s ease-in-out infinite;
+}
+
+.float-fast{
+  animation: float 4s ease-in-out infinite;
 }

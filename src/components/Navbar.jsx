@@ -1,63 +1,46 @@
-import { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
-
 const navItems = [
+  { label: "Home", id: "home"},
   { label: "About", id: "about" },
   { label: "Skills", id: "skills" },
   { label: "Projects", id: "projects" },
   { label: "Contact", id: "contact" },
 ];
 
+import { Logo } from "../assets/ImageDatas";
+
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-    setIsOpen(false);
   };
 
   return (
-    <nav className="nav-glow fixed left-1/2 top-5 z-50 -translate-x-1/2 rounded-full border border-blue-900/60 bg-slate-950/70 backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
-        <div className="hidden gap-2 md:flex">
-          {navItems.map((item) => (
-            <button
-              key={item.id}
-              type="button"
-              onClick={() => scrollToSection(item.id)}
-              className="rounded-full border border-transparent px-4 py-2 text-sm font-semibold text-slate-100/90 transition-all duration-300 hover:bg-sky-500/10 hover:text-white"
-            >
-              {item.label}
-            </button>
-          ))}
-        </div>
-
-        <button
-          className="text-2xl text-white focus:outline-none md:hidden"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle menu"
-        >
-          {isOpen ? <FaTimes /> : <FaBars />}
-        </button>
+    <nav className="flex fixed bg-slate-950 justify-between items-center w-full z-50 px-4 sm:px-6">
+      
+      <div className="flex items-center gap-2 px-4 text-xl font-bold text-slate-100/90">
+        <img src={Logo} alt="Logo" className="h-8 w-10"/>
+        <h1>Mohamednishar J</h1>
       </div>
 
-      {isOpen && (
-        <div className="animate-fadeIn flex flex-col gap-4 bg-slate-950/95 px-6 pb-6 text-lg font-semibold md:hidden">
+      <div className="flex max-w-7xl items-center gap-4 px-4 py-3">
+        <div className="gap-2">
           {navItems.map((item) => (
             <button
               key={item.id}
               type="button"
               onClick={() => scrollToSection(item.id)}
-              className="rounded-md px-2 py-2 text-left text-white transition hover:text-sky-300"
+              // className="relative px-4 py-2 text-sm font-semibold text-slate-100/90 transition-all duration-300 hover:text-white after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+              className="group relative px-4 py-2 text-sm font-semibold text-slate-100/90 transition-all duration-300 hover:text-white"
             >
               {item.label}
+              <span className="absolute bottom-0 left-1/2 h-[2px] w-0 -translate-x-1/2 bg-white transition-all duration-300 group-hover:w-full"></span>
             </button>
           ))}
         </div>
-      )}
+      </div>
     </nav>
   );
 }

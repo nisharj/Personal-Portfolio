@@ -1,135 +1,79 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { SiLeetcode, SiGeeksforgeeks } from "react-icons/si";
 import { profileImg } from "../assets/ImageDatas";
-import CV from "../assets/Mohamednishar_J.pdf";
-import { SOCIAL_LINKS } from "./SocialLinks";
+import Navbar from "./Navbar";
+import About from "./About";
+import FloatingIcons from "./FloatingIcons";
+import { Download, Mail, ArrowRight } from "lucide-react";
 
-import Skills from "./Skills";
-import Projects from "./Projects";
-import Contact from "./Contact";
 
 export default function Home() {
   return (
     <>
-      <section id="about" className="flex min-h-screen items-center bg-gradient-to-br from-[#020617] via-[#0f172a] to-[#172554] px-6 pt-28 text-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <Navbar />
 
-          <div className="space-y-6 order-2 text-center md:text-left">
+        <section
+            id="home"
+            className="min-h-screen bg-gradient-to-br from-[#020617] via-[#0f172a] to-[#172554] text-white pt-24 px-10"
+        >
+            <FloatingIcons />
 
-            {/* <p className="inline-flex rounded-full border border-sky-500/35 bg-slate-900/55 px-3 py-1 text-xs text-sky-200 sm:text-sm">
-              Aspiring Software Engineer
-            </p> */}
+            <div className="container mx-auto px-6 lg:px-12">
+                <div className="flex flex-col-reverse lg:flex-row items-center justify-between min-h-[80vh] gap-12">
+                    
+                    {/* Left Content */}
+                    <div className="max-w-2xl">
+                        <p className="text-lg text-slate-300 mb-3">Hi, I'm</p>
 
-            <h1 className="text-5xl font-extrabold text-slate-50 md:text-6xl">
-              Mohamednishar J
-            </h1>
+                        <h1 className="text-5xl lg:text-7xl font-bold mb-4">
+                            Mohamednishar J
+                        </h1>
 
-            <h2 className="text-2xl font-semibold text-sky-300 md:text-3xl">
-              Full Stack Developer
-            </h2>
+                        <h2 className="text-2xl lg:text-3xl font-semibold text-blue-400 mb-4">
+                            Software Developer
+                        </h2>
 
-            <p className="text-gray-300 max-w-xl mx-auto md:mx-0">
-              M.Tech Computer Science and Engineering student with a good foundation in
-              <span className="text-white"> Java and Data Structures & Algorithms</span>.
-              Experienced in building clean, responsive web applications using
-              <span className="text-white"> React and Tailwind CSS</span>.
-            </p>
+                        <p className="text-lg text-slate-300 mb-3">
+                            Java • React • Node.js • AI Applications
+                        </p>
 
-            <p className="text-gray-400 max-w-xl mx-auto md:mx-0">
-              Interested in full-stack development, system automation, and practical
-              AI-driven applications. Focused on writing readable code and building
-              user-friendly solutions.
-            </p>
+                        <p className="max-w-xl text-slate-400 leading-relaxed mb-8">
+                            M.Tech CSE student passionate about building scalable
+                            web applications and AI-powered solutions.
+                        </p>
 
-            {/* CV */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
-              <a
-                href={CV}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-xl border border-sky-500/35 px-6 py-3 text-slate-100 transition hover:border-sky-300 hover:bg-sky-500/10 hover:text-white"
-              >
-                View Resume
-              </a>
+                        <div className="flex flex-wrap gap-4">
+                            <button className="px-6 py-3 bg-blue-600 rounded-lg font-medium hover:cursor-pointer hover:bg-blue-700 transition">
+                                View Projects
+                                <ArrowRight className="inline ml-2" size={20} />
+                            </button>
 
-              <a
-                href={CV}
-                download
-                className="btn-blue-glow rounded-xl bg-gradient-to-r from-sky-600 to-blue-700 px-6 py-3 text-white transition hover:from-sky-500 hover:to-blue-600"
-              >
-                Download Resume
-              </a>
+                            <button className="px-6 py-3 border border-slate-500 rounded-lg font-medium hover:cursor-pointer hover:border-white transition">
+                                Download Resume 
+                                <Download className="inline ml-2" size={20} />
+                            </button>
+
+                            <button className="px-6 py-3 border border-slate-500 rounded-lg font-medium hover:cursor-pointer hover:border-white transition">
+                                Contact Me
+                                <Mail className="inline ml-2" size={20} />
+                            </button>
+                        </div>
+                    </div>
+
+                    {/* Right Image */}
+                    <div className="relative">
+                        <div className="absolute inset-0 rounded-full bg-blue-500/20 blur-3xl"></div>
+
+                        <img
+                            src={profileImg}
+                            alt="Profile"
+                            className="relative w-72 h-72 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-blue-500 p-1"
+                        />
+                    </div>
+
+                </div>
             </div>
+        </section>
 
-            <hr className="my-6 border-blue-800/60" />
-
-
-            {/* Social Links */}
-            <div className="flex justify-center md:justify-start gap-5 pt-2">
-              <a
-                href={SOCIAL_LINKS.github}
-                target="_blank"
-                className="transition hover:text-sky-300"
-              >
-                <FaGithub size={22} />
-              </a>
-
-              <a
-                href={SOCIAL_LINKS.linkedin}
-                target="_blank"
-                className="transition hover:text-sky-300"
-              >
-                <FaLinkedin size={22} />
-              </a>
-
-              <a
-                href={SOCIAL_LINKS.leetcode}
-                target="_blank"
-                className="hover:text-orange-500 transition"
-              >
-                <SiLeetcode size={22} />
-              </a>
-
-              <a
-                href={SOCIAL_LINKS.geeksforgeeks}
-                target="_blank"
-                className="hover:text-green-500 transition"
-              >
-                <SiGeeksforgeeks size={22} />
-              </a>
-
-              {/* <a 
-                href={SOCIAL_LINKS.instagram}
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-gray-400 hover:text-pink-500 hover:scale-110 transition-all duration-200"
-                aria-label="Instagram"
-              >
-                <FaInstagram size={28} />
-              </a> */}
-
-            </div>
-            
-
-            
-          </div>
-
-          <div className="flex justify-center md:justify-end order-1 md:order-2">
-            <div className="relative w-72 h-72 sm:w-72 sm:h-72 md:w-[23rem] md:h-[23rem] rounded-2xl overflow-hidden 
-                            border border-blue-800/60 shadow-xl shadow-slate-950/50 hover:scale-[1.02] hover:shadow-sky-500/20 transition duration-300">
-              <img
-                src={profileImg}
-                alt="Mohamednishar J"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <Skills />
-      <Projects />
-      <Contact />
+        <About />
     </>
   );
 }

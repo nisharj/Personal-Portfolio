@@ -1,5 +1,10 @@
-import profile_img from "./photo.jpg";
-// import Resume from "./Mohamednishar_CV.pdf";
+/* eslint-disable react-refresh/only-export-components */
+import logo from "./logo.png";
+import profile from "./photo.jpg";
 
-export const profileImg = profile_img;
-// export const CV = Resume;
+//Logo 
+export const Logo = logo;
+
+//Profile Image
+export const profileImg = profile;
+
