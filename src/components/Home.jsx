@@ -1,11 +1,22 @@
-import { profileImg } from "../assets/ImageDatas";
+import { profileImg, resumePDF } from "../assets/ImageDatas";
 import Navbar from "./Navbar";
-import About from "./About";
 import FloatingIcons from "./FloatingIcons";
 import { Download, Mail, ArrowRight } from "lucide-react";
+import About from "./About";
+import Skills from "./Skills";
+import Projects from "./Projects";
 
 
 export default function Home() {
+    const downloadResume = () =>{
+        const link = document.createElement("a");
+        link.href = resumePDF;
+        link.download = "Mohamednishar_J.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+
   return (
     <>
         <Navbar />
@@ -46,7 +57,10 @@ export default function Home() {
                                 <ArrowRight className="inline ml-2" size={20} />
                             </button>
 
-                            <button className="px-6 py-3 border border-slate-500 rounded-lg font-medium hover:cursor-pointer hover:border-white transition">
+                            <button
+                                onclick={downloadResume}
+                                className="px-6 py-3 border border-slate-500 rounded-lg font-medium hover:cursor-pointer hover:border-white transition"
+                            >
                                 Download Resume 
                                 <Download className="inline ml-2" size={20} />
                             </button>
@@ -74,6 +88,8 @@ export default function Home() {
         </section>
 
         <About />
+        <Skills />
+        <Projects />
     </>
   );
 }

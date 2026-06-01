@@ -1,70 +1,94 @@
-const technicalSkills = [
-  "Java (DSA)",
-  "C Programming",
-  "React.js",
-  "Spring Boot",
-  "HTML & CSS",
-  "Tailwind CSS",
-  "JavaScript",
-  "MySQL",
-  "MongoDB",
-  "PostgreSQL",
-  "Git & GitHub",
-  "Docker",
-];
+import { FaCode, FaNodeJs, FaReact } from "react-icons/fa";
+import { Code2, Database, Settings } from "lucide-react";
 
-const softSkills = [
-  "Strong problem-solving and logical thinking",
-  "Continuous learning mindset",
-  "Effective team collaboration",
-  "Time management and task prioritization",
-  "Clear and structured communication",
+const skills = [
+  {
+    title: "Languages",
+    color: "text-indigo-600",
+    icon: Code2,
+    items: ["Java", "JavaScript", "Python", "SQL"],
+  },
+  {
+    title: "Frontend",
+    color: "text-blue-600",
+    icon: FaReact,
+    items: ["React", "HTML", "CSS", "Tailwind CSS"],
+  },
+  {
+    title: "Backend",
+    color: "text-green-600",
+    icon: FaNodeJs,
+    items: ["Node.js", "Express.js", "SpringBoot", "FastAPI"],
+  },
+  {
+    title: "Database",
+    color: "text-orange-500",
+    icon: Database,
+    items: ["MongoDB", "MySQL"],
+  },
+  {
+    title: "Tools",
+    color: "text-violet-500",
+    icon: Settings,
+    items: ["Git", "GitHub", "Postman", "Docker"],
+  },
 ];
 
 export default function Skills() {
   return (
-    <section id="skills" className="min-h-screen bg-gradient-to-br from-[#020617] via-[#0f172a] to-[#172554] px-6 pb-20 pt-28 text-white">
-      <div className="mx-auto max-w-6xl">
-        <header className="mb-12 text-center">
-          <h2 className="text-4xl font-extrabold uppercase tracking-[0.12em] text-slate-100 md:text-5xl">
-            Skills
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-slate-200/75 md:text-base">
-            Core technologies and work habits I use to build reliable, user-focused software.
-          </p>
-        </header>
+    <section
+      id="skills"
+      className="relative overflow-hidden bg-white px-6 pb-24 pt-8 text-slate-900 sm:px-10"
+    >
+      <div className="float-slow absolute left-10 top-10 h-28 w-28 rounded-full bg-blue-100/60 blur-3xl" />
+      <div className="float absolute right-10 top-12 h-32 w-32 rounded-full bg-violet-100/50 blur-3xl" />
 
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-          <article className="rounded-2xl border border-blue-900/50 bg-slate-950/45 p-7 backdrop-blur-sm transition-all duration-300 hover:border-sky-400/40 hover:shadow-[0_0_28px_rgba(56,189,248,0.16)] md:p-8">
-            <h3 className="mb-6 text-2xl font-semibold text-slate-100">Technical Skills</h3>
+      <div className="relative container mx-auto border-t border-slate-200 px-0 pt-14 lg:px-12">
+        <div className="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-4 py-2 text-sm font-medium text-blue-700 shadow-sm">
+            <FaCode size={16} />
+            <span>Skills</span>
+        </div>
 
-            <div className="flex flex-wrap gap-3">
-              {technicalSkills.map((skill) => (
-                <span
-                  key={skill}
-                  className="rounded-full border border-blue-800/45 bg-black/25 px-4 py-2 text-sm font-medium text-slate-100/90 transition-all duration-300 hover:border-sky-400/60 hover:bg-sky-500/10 hover:text-white hover:shadow-[0_0_16px_rgba(56,189,248,0.24)]"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </article>
+        <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-5">
+          {skills.map((skill, index) => {
+            const Icon = skill.icon;
 
-          <article className="rounded-2xl border border-blue-900/50 bg-slate-950/45 p-7 backdrop-blur-sm transition-all duration-300 hover:border-sky-400/40 hover:shadow-[0_0_28px_rgba(56,189,248,0.16)] md:p-8">
-            <h3 className="mb-6 text-2xl font-semibold text-slate-100">Soft Skills</h3>
+            return (
+              <div
+                key={skill.title}
+                className={`fade-up rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-[0_18px_50px_rgba(15,23,42,0.08)] ${
+                  index === 1
+                    ? "delay-1"
+                    : index === 2
+                      ? "delay-2"
+                      : index >= 3
+                        ? "delay-3"
+                        : ""
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <h3 className={`text-xl font-semibold ${skill.color}`}>
+                      {skill.title}
+                    </h3>
 
-            <ul className="space-y-3">
-              {softSkills.map((skill) => (
-                <li
-                  key={skill}
-                  className="flex items-start gap-3 rounded-xl border border-blue-950/50 bg-black/20 px-4 py-3 text-sm text-slate-100/85 md:text-base"
-                >
-                  <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-sky-300" />
-                  <span>{skill}</span>
-                </li>
-              ))}
-            </ul>
-          </article>
+                    <ul className="mt-5 space-y-3 text-base text-slate-800">
+                      {skill.items.map((item) => (
+                        <li key={item} className="flex items-center gap-3">
+                          <span className="h-1.5 w-1.5 rounded-full bg-slate-900" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <span className="mt-1 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-50">
+                    <Icon size={30} className={skill.color} />
+                  </span>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

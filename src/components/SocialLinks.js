@@ -3,6 +3,6 @@ export const SOCIAL_LINKS = {
   linkedin: "https://www.linkedin.com/in/mohamednishar-j-b9118b274/",
   leetcode: "https://leetcode.com/u/Mr_God/",
   geeksforgeeks: "https://www.geeksforgeeks.org/user/mrmoham685c/",
-  instagram: "https://www.instagram.com/mohamednishar_j/",
-  telegram: "https://x.com/MMohamed31100" 
+  hackerrank: "https://www.hackerrank.com/profile/mr_mohamed9345",
+  instagram: "https://www.instagram.com/mohamednishar_j/"
 };
