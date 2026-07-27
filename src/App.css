@@ -1,15 +1,29 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
 /* Hide scrollbar for Chrome, Safari, Edge */
 ::-webkit-scrollbar {
   display: none;
 }
 
-@keyframes float{
-  0%, 100%{
+@keyframes float {
+  0%,
+  100% {
     transform: translateY(0px);
   }
-  50%{
+  50% {
     transform: translateY(-20px);
   }
 }
@@ -25,15 +39,15 @@
   }
 }
 
-.float{
+.float {
   animation: float 6s ease-in-out infinite;
 }
 
-.float-slow{
+.float-slow {
   animation: float 8s ease-in-out infinite;
 }
 
-.float-fast{
+.float-fast {
   animation: float 4s ease-in-out infinite;
 }
 

@@ -1,4 +1,5 @@
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { ArrowUpRight } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 
 export default function ProjectCard({
   image,
@@ -7,68 +8,63 @@ export default function ProjectCard({
   tech,
   code,
   live,
+  delayClass = "",
 }) {
-  const techItems = tech.split(",").map((item) => item.trim());
+
+  const techItems = Array.isArray(tech) ? tech : tech.split(",").map((item) => item.trim());
 
   return (
-    <article className="group relative rounded-2xl border border-blue-900/50 bg-slate-950/45 p-5 backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-sky-400/50 hover:shadow-[0_0_30px_rgba(56,189,248,0.18)]">
-      <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-sky-400/10 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+    <article
+      className={`fade-up group flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white shadow-[0_18px_50px_rgba(15,23,42,0.08)] transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_22px_60px_rgba(15,23,42,0.12)] ${delayClass}`}
+    >
+      <div className="aspect-[16/10] overflow-hidden bg-slate-100 sm:aspect-[16/9]">
+        <img
+          src={image}
+          alt={title}
+          className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-[1.03]"
+          loading="lazy"
+        />
+      </div>
 
-      <div className="relative z-10 space-y-4">
-        <div className="rounded-xl border border-blue-900/50 bg-gradient-to-br from-slate-950/80 to-black/40 p-3">
-          <div className="mb-3 flex gap-1.5">
-            <span className="h-2.5 w-2.5 rounded-full bg-sky-400/80" />
-            <span className="h-2.5 w-2.5 rounded-full bg-cyan-300/70" />
-            <span className="h-2.5 w-2.5 rounded-full bg-blue-700/80" />
-          </div>
-          <div className="h-32 overflow-hidden rounded-lg border border-blue-900/60 bg-gradient-to-br from-blue-900/25 to-slate-950/60">
-            <img
-              src={image}
-              alt={title}
-              className="h-full w-full object-cover object-top"
-              loading="lazy"
-            />
-          </div>
-        </div>
-
-        <h3 className="text-xl font-semibold text-slate-50 transition-colors duration-300 group-hover:text-sky-200">
+      <div className="flex flex-1 flex-col p-5 sm:p-6">
+        <h3 className="text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl">
           {title}
         </h3>
 
-        <p className="min-h-[72px] text-sm leading-relaxed text-slate-100/75">
+        <p className="mt-3 text-sm leading-6 text-slate-600 sm:min-h-[96px] sm:text-base sm:leading-7">
           {description}
         </p>
 
-        <div className="flex flex-wrap gap-2">
+        <div className="mt-5 flex flex-wrap gap-2">
           {techItems.map((item) => (
             <span
               key={item}
-              className="rounded-full border border-sky-500/25 bg-blue-950/35 px-3 py-1 text-xs font-medium text-slate-100/85"
+              className="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-600"
             >
               {item}
             </span>
           ))}
         </div>
 
-        <div className="flex gap-3 pt-1 text-sm font-medium">
-          <a
-            href={code}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-sky-500/35 bg-slate-950/60 px-4 py-2 text-slate-100/90 transition-all duration-300 hover:border-sky-300 hover:text-white hover:shadow-[0_0_18px_rgba(56,189,248,0.3)]"
-          >
-            <FaGithub size={14} />
-            <span>GitHub</span>
-          </a>
-
+        <div className="mt-auto flex flex-wrap items-center justify-between gap-4 pt-6 text-sm font-semibold sm:text-base">
           <a
             href={live}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-sky-400/50 bg-gradient-to-r from-sky-600/80 to-blue-700/80 px-4 py-2 text-white transition-all duration-300 hover:from-sky-500 hover:to-blue-600 hover:shadow-[0_0_20px_rgba(56,189,248,0.35)]"
+            className="inline-flex items-center gap-2 text-blue-600 transition hover:text-blue-700"
           >
-            <FaExternalLinkAlt size={12} />
             <span>Live Demo</span>
+            <ArrowUpRight size={17} />
+          </a>
+
+          <a
+            href={code}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-slate-900 transition hover:text-blue-700"
+          >
+            <FaGithub size={17} />
+            <span>GitHub</span>
           </a>
         </div>
       </div>
