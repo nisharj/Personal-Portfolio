@@ -1,10 +1,10 @@
 import "./App.css";
-import Home from "./components/Home";
+import DesktopOS from "./components/os/DesktopOS";
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-950">
-      <Home />
+    <div className="min-h-screen bg-zinc-950 overflow-hidden">
+      <DesktopOS />
     </div>
   );
 }

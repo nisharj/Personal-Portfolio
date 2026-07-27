@@ -2,11 +2,20 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5.5rem;
 }
 
 body {
   overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  background-color: #09090b;
+  color: #fafafa;
+  -webkit-font-smoothing: antialiased;
+  background-image: radial-gradient(circle at 1px 1px, #27272a 1px, transparent 0);
+  background-size: 32px 32px;
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: 'Outfit', sans-serif;
 }
 
 img {
